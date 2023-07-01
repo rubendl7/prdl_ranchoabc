@@ -1,1 +1,63 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$ranchoabc-primary: mat.define-palette(mat.$gray-palette, 500, 200, 100);
+$ranchoabc-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$ranchoabc-warn: mat.define-palette(mat.$red-palette);
+
+$ranchoabc-theme: mat.define-light-theme((
+  color: (
+    primary: $ranchoabc-primary,
+    accent: $ranchoabc-accent,
+    warn: $ranchoabc-warn,
+  )
+));
+
+@include mat.all-component-themes($ranchoabc-theme);
+
 /* You can add global styles to this file, and also import other style files */
+svg { padding-bottom: 3px; }
+
+$principal: #855730;
+$secundario: #6e2418;
+$obscuro: #6e2418;
+
+$primary: $principal;
+$secondary: $secundario;
+
+$enable-shadows: true;
+$enable-gradients: true;
+
+$btn-padding-y: 0.5rem;
+$btn-padding-x: 1.5rem;
+$btn-border-radius: .6rem;
+
+// Colores del interior del acordion
+//$accordion-color:                         $principal;
+//$accordion-bg:                            $secundario;   
+$rdlBlanco: #ffffff;
+$rdlNegro: #252525;
+$rdlBeige: #c2a39e;
+
+$accordion-button-color:                  $rdlBeige;
+$accordion-button-bg:                     $secundario;
+$accordion-button-active-bg:              $secundario;
+$accordion-button-active-color:           $rdlBlanco;
+$accordion-button-focus-border-color:     $secundario;
+$accordion-button-focus-box-shadow:       $principal;
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+
+html, body { height: 100%; }
+body { 
+  margin: 0; 
+  //font-family: Roboto, "Helvetica Neue", sans-serif; 
+  font-family: sans-serif, "Helvetica Neue", Roboto ; 
+}
+
+

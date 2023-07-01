@@ -1,0 +1,22 @@
+<section>
+    <div class="container">
+        <div class="text-center pt-5">
+            <h1 class="display-6 fw-bold lh-1 mb-2">Galería</h1>
+            <p><i>haz click en la imagen para agrandar</i></p>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3" *ngFor="let foto of fotos">
+                <a href="#!" (click)="oModal(foto.src)" data-bs-toggle="modal" data-bs-target="#modalImage1">
+                    <img class="w-100 mb-3 rounded" src="{{ruta2}}{{foto.thumb}}">    
+                </a>
+            </div> 
+        </div>
+    </div>
+</section>
+
+<div tabindex="-1" aria-labelledby="modalImage1" aria-hidden="true" class="modal fade" id="modalImage1" >
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content"><img src="{{ruta}}{{miFoto}}"></div>
+    </div>
+</div>
